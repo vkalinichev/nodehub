@@ -3,20 +3,15 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Wrumly' });
+  res.render('index', { title: 'Root' });
 });
 
-router.get('/users', function(req, res) {
-  res.render('users/list', { title: 'Users list' });
+router.get('/login', function(req, res) {
+  res.render('login', { title: 'Login' });
 });
 
-router.get('/users/search/:text', function(req, res) {
-  res.render('users/search', { title: 'Users search: ' +  + req.params.text });
+router.get('/logoff', function(req, res) {
+  res.render('logoff', { title: 'Logoff' });
 });
-
-router.get('/users/:id', function(req, res) {
-  res.render('users/profile', { title: 'User' + req.params.id });
-});
-
 
 module.exports = router;
